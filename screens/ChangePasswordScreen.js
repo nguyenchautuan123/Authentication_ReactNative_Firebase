@@ -70,6 +70,7 @@ const ChangePasswordScreen = ({ navigation }) => {
                 <TextInput
                     style={styles.input}
                     placeholder="Mật khẩu hiện tại"
+                    placeholderTextColor="black"
                     secureTextEntry
                     value={currentPassword}
                     onChangeText={setCurrentPassword}
@@ -77,6 +78,7 @@ const ChangePasswordScreen = ({ navigation }) => {
                 <TextInput
                     style={styles.input}
                     placeholder="Mật khẩu mới"
+                    placeholderTextColor="black"
                     secureTextEntry
                     value={newPassword}
                     onChangeText={setNewPassword}
@@ -84,6 +86,7 @@ const ChangePasswordScreen = ({ navigation }) => {
                 <TextInput
                     style={styles.input}
                     placeholder="Xác nhận mật khẩu mới"
+                    placeholderTextColor="black"
                     secureTextEntry
                     value={confirmPassword}
                     onChangeText={setConfirmPassword}

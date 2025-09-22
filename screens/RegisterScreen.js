@@ -53,6 +53,7 @@ const RegisterScreen = () => {
               <TextInput
                 style={styles.emailInput}
                 placeholder="Nhập tên người dùng (Email)"
+                placeholderTextColor="black"
                 value={email}
                 onChangeText={setEmail}
                 keyboardType="email-address"
@@ -61,6 +62,7 @@ const RegisterScreen = () => {
               <TextInput
                 style={styles.passwordInput}
                 placeholder="Nhập mật khẩu"
+                placeholderTextColor="black"
                 value={password}
                 onChangeText={setPassword}
                 secureTextEntry
@@ -68,6 +70,7 @@ const RegisterScreen = () => {
               <TextInput
                 style={styles.confirmPasswordInput}
                 placeholder="Xác nhận mật khẩu"
+                placeholderTextColor="black"
                 value={confirmPassword}
                 onChangeText={setConfirmPassword}
                 secureTextEntry

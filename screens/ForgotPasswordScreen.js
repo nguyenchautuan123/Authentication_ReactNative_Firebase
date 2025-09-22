@@ -48,6 +48,7 @@ const ForgotPasswordScreen = ({ navigation }) => {
                 <TextInput
                     style={styles.input}
                     placeholder="Nhập Email của bạn"
+                    placeholderTextColor="black"
                     value={email}
                     onChangeText={setEmail}
                     keyboardType="email-address"
