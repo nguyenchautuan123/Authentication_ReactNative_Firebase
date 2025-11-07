@@ -9,16 +9,34 @@ const SettingScreen = () => {
     const navigation = useNavigation(); // Khởi tạo navigation
     const [isLoggingOut, setIsLoggingOut] = useState(false); // State riêng cho nút đăng xuất giống isLoading
 
+    const performLogout = () => {
+      setIsLoggingOut(true);
+      signOut(auth)
+        .catch(error => {
+          console.error(error);
+          Alert.alert("Error", "Logout failed. Please try again.");
+          setIsLoggingOut(false);
+        });
+    };
+
     const handleSignOut = () => {
-        setIsLoggingOut(true);
-        signOut(auth)
-            .then(() => {
-                console.log('Đăng xuất thành công !!')
-            })
-            .catch(error => console.error(error))
-            .finally(() => {
-              // Không cần set false vì màn hình sẽ bị unmount
-            });
+      if(isLoggingOut){
+        return;
+      }
+      Alert.alert(
+        "Confirm Loggout",
+        "Are you sure you want to log out ?",
+        [
+          {
+            text: "Cancel",
+            style: 'cancel',
+          },
+          {
+            text: "Log out",
+            onPress: performLogout,
+          },
+        ]
+      );
     };
   return (
     <SafeAreaView style={styles.container}>
