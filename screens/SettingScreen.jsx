@@ -24,7 +24,7 @@ const SettingScreen = () => {
         return;
       }
       Alert.alert(
-        "Confirm Loggout",
+        "Confirm Logout",
         "Are you sure you want to log out ?",
         [
           {
